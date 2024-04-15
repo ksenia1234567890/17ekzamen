@@ -54,14 +54,15 @@ namespace ekzamen17
             cmd.Parameters.AddWithValue("@address_pass", textBox29.Text);
             cmd.Parameters.AddWithValue("@institut", textBox30.Text);
         }
-    }
 
-    private void printBut_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            Print print = new Print(textBox1.Text, textBox2.Text, textBox3.Text, 
-                comboBox2.Text, comboBox5.Text, comboBox3.Text, comboBox4.Text, comboBox6.Text);
+            Print print = new Print(textBox19.Text, textBox20.Text, textBox21.Text,
+                comboBox8.Text, comboBox9.Text, comboBox10.Text, comboBox11.Text, comboBox12.Text);
             print.ShowDialog();
         }
+    }
+
 
         // Загрузка документа
         private void documentBut_Click(object sender, EventArgs e)
