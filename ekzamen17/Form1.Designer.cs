@@ -327,69 +327,48 @@
             // 
             this.comboBox8.FormattingEnabled = true;
             this.comboBox8.Items.AddRange(new object[] {
-            "СПО",
-            "Бакалавриат",
-            "Специалитет",
-            "Магистратура"});
+            ""});
             this.comboBox8.Location = new System.Drawing.Point(507, 352);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(185, 21);
             this.comboBox8.TabIndex = 2;
-            this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
-            this.comboBox8.TextChanged += new System.EventHandler(this.comboBox8_TextChanged);
+            this.comboBox8.Click += new System.EventHandler(this.comboBox8_Click);
             // 
             // comboBox9
             // 
             this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Items.AddRange(new object[] {
-            "СПО",
-            "Бакалавриат",
-            "Специалитет",
-            "Магистратура"});
             this.comboBox9.Location = new System.Drawing.Point(507, 379);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(185, 21);
             this.comboBox9.TabIndex = 2;
-            this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
+            this.comboBox9.Click += new System.EventHandler(this.comboBox9_Click);
             // 
             // comboBox10
             // 
             this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
-            "СПО",
-            "Бакалавриат",
-            "Специалитет",
-            "Магистратура"});
             this.comboBox10.Location = new System.Drawing.Point(507, 406);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(185, 21);
             this.comboBox10.TabIndex = 2;
+            this.comboBox10.Click += new System.EventHandler(this.comboBox10_Click);
             // 
             // comboBox11
             // 
             this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Items.AddRange(new object[] {
-            "СПО",
-            "Бакалавриат",
-            "Специалитет",
-            "Магистратура"});
             this.comboBox11.Location = new System.Drawing.Point(507, 433);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(185, 21);
             this.comboBox11.TabIndex = 2;
+            this.comboBox11.Click += new System.EventHandler(this.comboBox11_Click);
             // 
             // comboBox12
             // 
             this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Items.AddRange(new object[] {
-            "СПО",
-            "Бакалавриат",
-            "Специалитет",
-            "Магистратура"});
             this.comboBox12.Location = new System.Drawing.Point(507, 460);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(185, 21);
             this.comboBox12.TabIndex = 2;
+            this.comboBox12.Click += new System.EventHandler(this.comboBox12_Click);
             // 
             // textBox31
             // 

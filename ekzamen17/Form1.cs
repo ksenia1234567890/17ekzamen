@@ -13,11 +13,11 @@ namespace ekzamen17
 {
     public partial class Form1 : Form
     {
-        
+
         public Form1()
         {
             InitializeComponent();
-            
+
         }
         public string path;
 
@@ -98,40 +98,6 @@ namespace ekzamen17
 
         private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBox7.Text=="СПО")
-            {
-                comboBox8.Items.Clear();
-                comboBox8.Items.Add("Монтажник радиоэлектронной аппаратуры и приборов");
-                comboBox8.Items.Add("Строительство и эксплуатация зданий и сооружений");
-                comboBox8.Items.Add("Строительство и эксплуатация автомобильных дорог и аэродромов");
-                comboBox8.Items.Add("Монтаж и эксплуатация оборудования и систем газоснабжения");
-                comboBox8.Items.Add("Монтаж и эксплутация внутренних сантехнических устройств, кондиционирования воздуха и вентиляции");
-                comboBox8.Items.Add("Компьютерные системы и комплексы");
-            }
-            if (comboBox7.Text == "Бакалавриат")
-            {
-                comboBox8.Items.Add("Архитектура");
-                comboBox8.Items.Add("Реконструкция и реставрация архитектурного наследия");
-                comboBox8.Items.Add("Дизайн архитектурной среды");
-                comboBox8.Items.Add("Градостроительство");
-            }
-            if (comboBox7.Text == "Специалитет")
-            {
-                comboBox8.Items.Add("Информационная безопасность телекоммуникационных систем");
-                comboBox8.Items.Add("Радиоэлектронные системы и комплексы");
-                comboBox8.Items.Add("Проектирование авиационных и ракетных двигателей");
-                comboBox8.Items.Add("Самолёто- и вертолётостроение");
-            }
-            if (comboBox7.Text == "Магистратура")
-            {
-                comboBox8.Items.Add("Архитектура");
-                comboBox8.Items.Add("Реконструкция и реставрация архитектурного наследия");
-                comboBox8.Items.Add("Дизайн архитектурной среды");
-            }
-        }
-
-        private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -168,9 +134,191 @@ namespace ekzamen17
                 comboBox8.Items.Add("Дизайн архитектурной среды");
             }
         }
+
+        private void comboBox8_Click(object sender, EventArgs e)
+        {
+            if (comboBox7.Text == "СПО")
+            {
+                comboBox8.Items.Clear();
+                comboBox8.Items.Add("Монтажник радиоэлектронной аппаратуры и приборов");
+                comboBox8.Items.Add("Строительство и эксплуатация зданий и сооружений");
+                comboBox8.Items.Add("Строительство и эксплуатация автомобильных дорог и аэродромов");
+                comboBox8.Items.Add("Монтаж и эксплуатация оборудования и систем газоснабжения");
+                comboBox8.Items.Add("Монтаж и эксплутация внутренних сантехнических устройств, кондиционирования воздуха и вентиляции");
+                comboBox8.Items.Add("Компьютерные системы и комплексы");
+            }
+            if (comboBox7.Text == "Бакалавриат")
+            {
+                comboBox8.Items.Clear();
+                comboBox8.Items.Add("Архитектура");
+                comboBox8.Items.Add("Реконструкция и реставрация архитектурного наследия");
+                comboBox8.Items.Add("Дизайн архитектурной среды");
+                comboBox8.Items.Add("Градостроительство");
+            }
+            if (comboBox7.Text == "Специалитет")
+            {
+                comboBox8.Items.Clear();
+                comboBox8.Items.Add("Информационная безопасность телекоммуникационных систем");
+                comboBox8.Items.Add("Радиоэлектронные системы и комплексы");
+                comboBox8.Items.Add("Проектирование авиационных и ракетных двигателей");
+                comboBox8.Items.Add("Самолёто- и вертолётостроение");
+            }
+            if (comboBox7.Text == "Магистратура")
+            {
+                comboBox8.Items.Clear();
+                comboBox8.Items.Add("Архитектура");
+                comboBox8.Items.Add("Реконструкция и реставрация архитектурного наследия");
+                comboBox8.Items.Add("Дизайн архитектурной среды");
+            }
+        }
+
+        private void comboBox9_Click(object sender, EventArgs e)
+        {
+            if (comboBox7.Text == "СПО")
+            {
+                comboBox9.Items.Clear();
+                comboBox9.Items.Add("Монтажник радиоэлектронной аппаратуры и приборов");
+                comboBox9.Items.Add("Строительство и эксплуатация зданий и сооружений");
+                comboBox9.Items.Add("Строительство и эксплуатация автомобильных дорог и аэродромов");
+                comboBox9.Items.Add("Монтаж и эксплуатация оборудования и систем газоснабжения");
+                comboBox9.Items.Add("Монтаж и эксплутация внутренних сантехнических устройств, кондиционирования воздуха и вентиляции");
+                comboBox9.Items.Add("Компьютерные системы и комплексы");
+            }
+            if (comboBox7.Text == "Бакалавриат")
+            {
+                comboBox9.Items.Clear();
+                comboBox9.Items.Add("Архитектура");
+                comboBox9.Items.Add("Реконструкция и реставрация архитектурного наследия");
+                comboBox9.Items.Add("Дизайн архитектурной среды");
+                comboBox9.Items.Add("Градостроительство");
+            }
+            if (comboBox7.Text == "Специалитет")
+            {
+                comboBox9.Items.Clear();
+                comboBox9.Items.Add("Информационная безопасность телекоммуникационных систем");
+                comboBox9.Items.Add("Радиоэлектронные системы и комплексы");
+                comboBox9.Items.Add("Проектирование авиационных и ракетных двигателей");
+                comboBox9.Items.Add("Самолёто- и вертолётостроение");
+            }
+            if (comboBox7.Text == "Магистратура")
+            {
+                comboBox9.Items.Clear();
+                comboBox9.Items.Add("Архитектура");
+                comboBox9.Items.Add("Реконструкция и реставрация архитектурного наследия");
+                comboBox9.Items.Add("Дизайн архитектурной среды");
+            }
+        }
+
+        private void comboBox10_Click(object sender, EventArgs e)
+        {
+            if (comboBox7.Text == "СПО")
+            {
+                comboBox10.Items.Clear();
+                comboBox10.Items.Add("Монтажник радиоэлектронной аппаратуры и приборов");
+                comboBox10.Items.Add("Строительство и эксплуатация зданий и сооружений");
+                comboBox10.Items.Add("Строительство и эксплуатация автомобильных дорог и аэродромов");
+                comboBox10.Items.Add("Монтаж и эксплуатация оборудования и систем газоснабжения");
+                comboBox10.Items.Add("Монтаж и эксплутация внутренних сантехнических устройств, кондиционирования воздуха и вентиляции");
+                comboBox10.Items.Add("Компьютерные системы и комплексы");
+            }
+            if (comboBox7.Text == "Бакалавриат")
+            {
+                comboBox10.Items.Clear();
+                comboBox10.Items.Add("Архитектура");
+                comboBox10.Items.Add("Реконструкция и реставрация архитектурного наследия");
+                comboBox10.Items.Add("Дизайн архитектурной среды");
+                comboBox10.Items.Add("Градостроительство");
+            }
+            if (comboBox7.Text == "Специалитет")
+            {
+                comboBox10.Items.Clear();
+                comboBox10.Items.Add("Информационная безопасность телекоммуникационных систем");
+                comboBox10.Items.Add("Радиоэлектронные системы и комплексы");
+                comboBox10.Items.Add("Проектирование авиационных и ракетных двигателей");
+                comboBox10.Items.Add("Самолёто- и вертолётостроение");
+            }
+            if (comboBox7.Text == "Магистратура")
+            {
+                comboBox10.Items.Clear();
+                comboBox10.Items.Add("Архитектура");
+                comboBox10.Items.Add("Реконструкция и реставрация архитектурного наследия");
+                comboBox10.Items.Add("Дизайн архитектурной среды");
+            }
+        }
+
+        private void comboBox11_Click(object sender, EventArgs e)
+        {
+            if (comboBox7.Text == "СПО")
+            {
+                comboBox11.Items.Clear();
+                comboBox11.Items.Add("Монтажник радиоэлектронной аппаратуры и приборов");
+                comboBox11.Items.Add("Строительство и эксплуатация зданий и сооружений");
+                comboBox11.Items.Add("Строительство и эксплуатация автомобильных дорог и аэродромов");
+                comboBox11.Items.Add("Монтаж и эксплуатация оборудования и систем газоснабжения");
+                comboBox11.Items.Add("Монтаж и эксплутация внутренних сантехнических устройств, кондиционирования воздуха и вентиляции");
+                comboBox11.Items.Add("Компьютерные системы и комплексы");
+            }
+            if (comboBox7.Text == "Бакалавриат")
+            {
+                comboBox11.Items.Clear();
+                comboBox11.Items.Add("Архитектура");
+                comboBox11.Items.Add("Реконструкция и реставрация архитектурного наследия");
+                comboBox11.Items.Add("Дизайн архитектурной среды");
+                comboBox11.Items.Add("Градостроительство");
+            }
+            if (comboBox7.Text == "Специалитет")
+            {
+                comboBox11.Items.Clear();
+                comboBox11.Items.Add("Информационная безопасность телекоммуникационных систем");
+                comboBox11.Items.Add("Радиоэлектронные системы и комплексы");
+                comboBox11.Items.Add("Проектирование авиационных и ракетных двигателей");
+                comboBox11.Items.Add("Самолёто- и вертолётостроение");
+            }
+            if (comboBox7.Text == "Магистратура")
+            {
+                comboBox11.Items.Clear();
+                comboBox11.Items.Add("Архитектура");
+                comboBox11.Items.Add("Реконструкция и реставрация архитектурного наследия");
+                comboBox11.Items.Add("Дизайн архитектурной среды");
+            }
+        }
+
+        private void comboBox12_Click(object sender, EventArgs e)
+        {
+            if (comboBox7.Text == "СПО")
+            {
+                comboBox12.Items.Clear();
+                comboBox12.Items.Add("Монтажник радиоэлектронной аппаратуры и приборов");
+                comboBox12.Items.Add("Строительство и эксплуатация зданий и сооружений");
+                comboBox12.Items.Add("Строительство и эксплуатация автомобильных дорог и аэродромов");
+                comboBox12.Items.Add("Монтаж и эксплуатация оборудования и систем газоснабжения");
+                comboBox12.Items.Add("Монтаж и эксплутация внутренних сантехнических устройств, кондиционирования воздуха и вентиляции");
+                comboBox12.Items.Add("Компьютерные системы и комплексы");
+            }
+            if (comboBox7.Text == "Бакалавриат")
+            {
+                comboBox12.Items.Clear();
+                comboBox12.Items.Add("Архитектура");
+                comboBox12.Items.Add("Реконструкция и реставрация архитектурного наследия");
+                comboBox12.Items.Add("Дизайн архитектурной среды");
+                comboBox12.Items.Add("Градостроительство");
+            }
+            if (comboBox7.Text == "Специалитет")
+            {
+                comboBox12.Items.Clear();
+                comboBox12.Items.Add("Информационная безопасность телекоммуникационных систем");
+                comboBox12.Items.Add("Радиоэлектронные системы и комплексы");
+                comboBox12.Items.Add("Проектирование авиационных и ракетных двигателей");
+                comboBox12.Items.Add("Самолёто- и вертолётостроение");
+            }
+            if (comboBox7.Text == "Магистратура")
+            {
+                comboBox12.Items.Clear();
+                comboBox12.Items.Add("Архитектура");
+                comboBox12.Items.Add("Реконструкция и реставрация архитектурного наследия");
+                comboBox12.Items.Add("Дизайн архитектурной среды");
+            }
+        }
     }
-
-
-        
     }
 
