@@ -46,11 +46,13 @@ namespace ekzamen17
             cmd.Parameters.AddWithValue("@snils", textBox9.Text);
             cmd.Parameters.AddWithValue("@seria", textBox15.Text);
             cmd.Parameters.AddWithValue("@number_pass", textBox1.Text);
-            cmd.Parameters.AddWithValue("@name", textBox2.Text);
-            cmd.Parameters.AddWithValue("@patronymic", textBox3.Text);
-            cmd.Parameters.AddWithValue("@level_edu", comboBox1.Text);
-            cmd.Parameters.AddWithValue("@coins_edu", textBox14.Text);
-            cmd.Parameters.AddWithValue("@snils", textBox9.Text);
+            cmd.Parameters.AddWithValue("@when_pass", textBox2.Text);
+            cmd.Parameters.AddWithValue("@how_pass", textBox3.Text);
+            cmd.Parameters.AddWithValue("@phone", comboBox1.Text);
+            cmd.Parameters.AddWithValue("@email", textBox14.Text);
+            cmd.Parameters.AddWithValue("@path_edu", textBox9.Text);
+            cmd.Parameters.AddWithValue("@address_pass", textBox1.Text);
+            cmd.Parameters.AddWithValue("@institut", textBox2.Text);
         }
     }
 
