@@ -96,10 +96,6 @@ namespace ekzamen17
             this.Hide();
         }
 
-        private void comboBox8_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void comboBox8_TextChanged(object sender, EventArgs e)
         {
