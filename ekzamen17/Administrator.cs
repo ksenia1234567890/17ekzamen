@@ -18,11 +18,18 @@ namespace ekzamen17
         {
             InitializeComponent();
         }
-        string status = "";
+        int status ;
         private void Administrator_Load(object sender, EventArgs e)
         {
             try
             {
+                NpgsqlConnection connect = new NpgsqlConnection("Host=localhost;Username=postgres;Password=cxNTVJas;Database=17ekzamen");
+                string query = "select * from data_ab";
+                NpgsqlCommand cmd = new NpgsqlCommand(query, connect);
+                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, connect);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
                 dataGridView1.Columns[0].HeaderText = "Идентификатор";
                 dataGridView1.Columns[1].HeaderText = "Фамилия";
                 dataGridView1.Columns[2].HeaderText = "Имя";
@@ -38,14 +45,7 @@ namespace ekzamen17
                 dataGridView1.Columns[12].HeaderText = "Электронная почта";
                 dataGridView1.Columns[13].HeaderText = "Документ об образовании";
                 dataGridView1.Columns[14].HeaderText = "Прописка";
-                dataGridView1.Columns[0].HeaderText = "Учебное заведение, которое окончил абитуриент";
-                NpgsqlConnection connect = new NpgsqlConnection("Host=localhost;Username=postgres;Password=cxNTVJas;Database=17ekzamen");
-                string query = "select * from data_ab";
-                NpgsqlCommand cmd = new NpgsqlCommand(query, connect);
-                NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(query, connect);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Columns[15].HeaderText = "Учебное заведение, которое окончил абитуриент";
 
 
             }
@@ -62,7 +62,7 @@ namespace ekzamen17
             try
             {
                 NpgsqlConnection connect = new NpgsqlConnection("Host=localhost;Username=postgres;Password=cxNTVJas;Database=17ekzamen");
-                string query = "insert into status(id,status,commentary) values(@id,@status,@commentary)";
+                string query = "insert into status_letter (id,status,commentary) values(@id,@status,@commentary)";
                 NpgsqlCommand cmd = new NpgsqlCommand(query, connect);
                 cmd.Parameters.AddWithValue("@id", status);
                 cmd.Parameters.AddWithValue("@status", button1.Text);
@@ -79,7 +79,7 @@ namespace ekzamen17
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            status = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+            status = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value);
         }
 
         // Нажатие на кнопку "В доработку"
@@ -90,10 +90,10 @@ namespace ekzamen17
             try{
                
             NpgsqlConnection connect = new NpgsqlConnection("Host=localhost;Username=postgres;Password=cxNTVJas;Database=17ekzamen");
-            string query = "insert into status(id,status,commentary) values(@id,@status,@commentary)";
+            string query = "insert into status_letter(id,status,commentary) values(@id,@status,@commentary)";
             NpgsqlCommand cmd = new NpgsqlCommand(query, connect);
             cmd.Parameters.AddWithValue("@id", status);
-            cmd.Parameters.AddWithValue("@status", button1.Text);
+            cmd.Parameters.AddWithValue("@status", button2.Text);
             cmd.Parameters.AddWithValue("@commentary", textBox1.Text);
             connect.Open();
             cmd.ExecuteNonQuery();
@@ -103,6 +103,11 @@ namespace ekzamen17
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
     }

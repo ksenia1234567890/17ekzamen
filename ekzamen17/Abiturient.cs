@@ -16,6 +16,9 @@ namespace ekzamen17
     {
         public string login;
         public string password;
+        public string surname;
+        public string name;
+        public string patronymic;
         
         public Abiturient(string login, string password)
         {
@@ -26,7 +29,7 @@ namespace ekzamen17
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
 
         private void Abiturient_Load(object sender, EventArgs e)
@@ -34,28 +37,21 @@ namespace ekzamen17
 
             try
             {
-                NpgsqlConnection con = new NpgsqlConnection("Host=localhost,Username=postgres,Password=cxNTVJAS,Database=17ekzamen");
+                NpgsqlConnection connect = new NpgsqlConnection("Host=localhost;Username=postgres;Password=cxNTVJas;Data=17ekzamen");
                 string query = "select id from login_password where login=@login and password=@password";
-                NpgsqlCommand cmd = new NpgsqlCommand(query, con);
+                NpgsqlCommand cmd = new NpgsqlCommand(query, connect);
                 cmd.Parameters.AddWithValue("@login", login);
                 cmd.Parameters.AddWithValue("@password", password);
-                con.Open();
-                string id = (string)cmd.ExecuteScalar();
-                con.Close();
-                string sql = "select surname,name,patronymic from data_edu where id=@id";
-                NpgsqlCommand command = new NpgsqlCommand(sql, con);
-                command.Parameters.AddWithValue("id", id.ToString());
-                con.Open();
-                string data_ab = (string)command.ExecuteScalar();
-                con.Close();
-                label2.Text = data_ab;
-                string line = "select status from status_letter where id=@id";
-                NpgsqlCommand npgsql = new NpgsqlCommand(line, con);
-                command.Parameters.AddWithValue("id", id.ToString());
-                con.Open();
-                string zayavka = (string)npgsql.ExecuteScalar();
-                con.Close();
-                status.Text = zayavka;
+                connect.Open();
+                int id = Convert.ToInt32(cmd.ExecuteScalar());
+                connect.Close();
+
+                NpgsqlConnection contact = new NpgsqlConnection("Host=localhost;Username=postgres;Password=cxNTVJas;Data=17ekzamen");
+                string query2 = "select surname from data_ab where id=@id";
+                NpgsqlCommand cmd2 = new NpgsqlCommand(query2, contact);
+                cmd2.Parameters.AddWithValue("@id", id);
+                contact.Open();
+                string 
             }
             catch(Exception ex)
             {

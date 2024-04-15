@@ -178,7 +178,7 @@
             // 
             // textBox23
             // 
-            this.textBox23.Location = new System.Drawing.Point(521, 63);
+            this.textBox23.Location = new System.Drawing.Point(507, 63);
             this.textBox23.Name = "textBox23";
             this.textBox23.Size = new System.Drawing.Size(185, 20);
             this.textBox23.TabIndex = 0;
@@ -186,7 +186,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(518, 32);
+            this.label26.Location = new System.Drawing.Point(504, 32);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(45, 13);
             this.label26.TabIndex = 1;
@@ -274,9 +274,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(507, 127);
+            this.button1.Location = new System.Drawing.Point(507, 113);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(217, 29);
+            this.button1.Size = new System.Drawing.Size(185, 43);
             this.button1.TabIndex = 3;
             this.button1.Text = "Загрузить документ об образовании";
             this.button1.UseVisualStyleBackColor = true;
