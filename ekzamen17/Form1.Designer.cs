@@ -514,7 +514,7 @@
             this.Controls.Add(this.textBox19);
             this.Controls.Add(this.textBox18);
             this.Name = "Form1";
-            this.Text = "Странициа регистрации абитуриента";
+            this.Text = "Страница регистрации абитуриента";
             this.ResumeLayout(false);
             this.PerformLayout();
 
