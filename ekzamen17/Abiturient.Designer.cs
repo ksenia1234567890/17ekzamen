@@ -97,7 +97,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Abiturient";
-            this.Text = "Abiturient";
+            this.Text = "Главная страница";
             this.Load += new System.EventHandler(this.Abiturient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

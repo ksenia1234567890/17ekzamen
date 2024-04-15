@@ -51,9 +51,36 @@ namespace ekzamen17
                 NpgsqlCommand cmd2 = new NpgsqlCommand(query2, contact);
                 cmd2.Parameters.AddWithValue("@id", id);
                 contact.Open();
-                string 
+                surname = cmd2.ExecuteScalar().ToString();
+                contact.Close();
+
+                NpgsqlConnection con = new NpgsqlConnection("Host=localhost;Username=postgres;Password=cxNTVJas;Data=17ekzamen");
+                string query3 = "select name from data_ab where id=@id";
+                NpgsqlCommand cmd3 = new NpgsqlCommand(query3, con);
+                cmd3.Parameters.AddWithValue("@id", id);
+                con.Open();
+                name = cmd3.ExecuteScalar().ToString();
+                con.Close();
+
+                NpgsqlConnection connaction = new NpgsqlConnection("Host=localhost;Username=postgres;Password=cxNTVJas;Data=17ekzamen");
+                string query4 = "select patronymic from data_ab where id=@id";
+                NpgsqlCommand cmd4 = new NpgsqlCommand(query4, connaction);
+                cmd4.Parameters.AddWithValue("@id", id);
+                connaction.Open();
+                patronymic = cmd4.ExecuteScalar().ToString();
+                connaction.Close();
+
+                label2.Text = surname + " " + name + " " + patronymic;
+
+                NpgsqlConnection connecting = new NpgsqlConnection("Host=localhost;Username=postgres;Password=cxNTVJas;Data=17ekzamen");
+                string query5 = "select status from status_letter where id=@id";
+                NpgsqlCommand cmd5 = new NpgsqlCommand(query5, connecting);
+                cmd5.Parameters.AddWithValue("@id", id);
+                connecting.Open();
+                status.Text = cmd5.ExecuteScalar().ToString();
+                connecting.Close();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
