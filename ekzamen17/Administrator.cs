@@ -113,7 +113,9 @@ namespace ekzamen17
         // Редактирование списка направлений
         private void button4_Click(object sender, EventArgs e)
         {
-
+            Napravlenie napravlenie = new Napravlenie();
+            napravlenie.ShowDialog();
+            this.Hide();
         }
     }
     }

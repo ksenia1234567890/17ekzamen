@@ -58,6 +58,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Добавить";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -122,6 +123,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Изменить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -131,15 +133,17 @@
             this.button3.TabIndex = 1;
             this.button3.Text = "Удалить";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(552, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(208, 26);
+            this.label4.Size = new System.Drawing.Size(211, 65);
             this.label4.TabIndex = 4;
-            this.label4.Text = "Для того чтобы изменить или удалить, \r\nвыберете любую строку в таблице";
+            this.label4.Text = "Чтобы изменить запись, введите \r\nидентификатор из таблицы и заполните\r\nполя.\r\nЧто" +
+    "бы удалить запись в таблце,\r\nвведите только идентфикатор";
             // 
             // Napravlenie
             // 
@@ -159,6 +163,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Napravlenie";
             this.Text = "Список направлений";
+            this.Load += new System.EventHandler(this.Napravlenie_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
