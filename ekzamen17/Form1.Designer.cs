@@ -71,6 +71,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox33 = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox18
@@ -273,7 +274,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(521, 131);
+            this.button1.Location = new System.Drawing.Point(507, 127);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(217, 29);
             this.button1.TabIndex = 3;
@@ -283,7 +284,7 @@
             // 
             // textBox29
             // 
-            this.textBox29.Location = new System.Drawing.Point(521, 207);
+            this.textBox29.Location = new System.Drawing.Point(507, 203);
             this.textBox29.Name = "textBox29";
             this.textBox29.Size = new System.Drawing.Size(185, 20);
             this.textBox29.TabIndex = 0;
@@ -291,7 +292,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(518, 176);
+            this.label32.Location = new System.Drawing.Point(504, 172);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(57, 13);
             this.label32.TabIndex = 1;
@@ -299,7 +300,7 @@
             // 
             // textBox30
             // 
-            this.textBox30.Location = new System.Drawing.Point(521, 278);
+            this.textBox30.Location = new System.Drawing.Point(507, 274);
             this.textBox30.Name = "textBox30";
             this.textBox30.Size = new System.Drawing.Size(185, 20);
             this.textBox30.TabIndex = 0;
@@ -307,7 +308,7 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(518, 247);
+            this.label33.Location = new System.Drawing.Point(504, 243);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(152, 26);
             this.label33.TabIndex = 1;
@@ -316,7 +317,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(518, 326);
+            this.label34.Location = new System.Drawing.Point(504, 322);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(173, 13);
             this.label34.TabIndex = 1;
@@ -330,7 +331,7 @@
             "Бакалавриат",
             "Специалитет",
             "Магистратура"});
-            this.comboBox8.Location = new System.Drawing.Point(521, 356);
+            this.comboBox8.Location = new System.Drawing.Point(507, 352);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(185, 21);
             this.comboBox8.TabIndex = 2;
@@ -343,7 +344,7 @@
             "Бакалавриат",
             "Специалитет",
             "Магистратура"});
-            this.comboBox9.Location = new System.Drawing.Point(521, 383);
+            this.comboBox9.Location = new System.Drawing.Point(507, 379);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(185, 21);
             this.comboBox9.TabIndex = 2;
@@ -356,7 +357,7 @@
             "Бакалавриат",
             "Специалитет",
             "Магистратура"});
-            this.comboBox10.Location = new System.Drawing.Point(521, 410);
+            this.comboBox10.Location = new System.Drawing.Point(507, 406);
             this.comboBox10.Name = "comboBox10";
             this.comboBox10.Size = new System.Drawing.Size(185, 21);
             this.comboBox10.TabIndex = 2;
@@ -369,7 +370,7 @@
             "Бакалавриат",
             "Специалитет",
             "Магистратура"});
-            this.comboBox11.Location = new System.Drawing.Point(521, 437);
+            this.comboBox11.Location = new System.Drawing.Point(507, 433);
             this.comboBox11.Name = "comboBox11";
             this.comboBox11.Size = new System.Drawing.Size(185, 21);
             this.comboBox11.TabIndex = 2;
@@ -382,7 +383,7 @@
             "Бакалавриат",
             "Специалитет",
             "Магистратура"});
-            this.comboBox12.Location = new System.Drawing.Point(521, 464);
+            this.comboBox12.Location = new System.Drawing.Point(507, 460);
             this.comboBox12.Name = "comboBox12";
             this.comboBox12.Size = new System.Drawing.Size(185, 21);
             this.comboBox12.TabIndex = 2;
@@ -421,16 +422,17 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(786, 239);
+            this.button2.Location = new System.Drawing.Point(782, 247);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(163, 30);
             this.button2.TabIndex = 4;
-            this.button2.Text = "Зарегистрироваться";
+            this.button2.Text = "Создать аккаунт";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(786, 287);
+            this.button3.Location = new System.Drawing.Point(782, 346);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(163, 30);
             this.button3.TabIndex = 4;
@@ -454,9 +456,20 @@
             this.label37.TabIndex = 1;
             this.label37.Text = "Серия";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(782, 298);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(163, 30);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Зарегистрироваться";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1000, 500);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -600,6 +613,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox33;
         private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Button button4;
     }
 }
 

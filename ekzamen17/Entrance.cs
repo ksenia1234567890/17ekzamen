@@ -24,6 +24,7 @@ namespace ekzamen17
         {
             Form1 registry = new Form1();
             registry.ShowDialog();
+            this.Hide();
         }
 
         private void entranceBut_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace ekzamen17
                 string query = "select status from login_password where password=@password and login=@login";
                 NpgsqlCommand cmd = new NpgsqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@password", textBox2.Text);
-                cmd.Parameters.AddWithValue("@name", textBox1.Text);
+                cmd.Parameters.AddWithValue("@login", textBox1.Text);
                 con.Open();
                 string status = (string)cmd.ExecuteScalar();
                 con.Close();
@@ -44,11 +45,13 @@ namespace ekzamen17
                 {
                     Abiturient abiturient = new Abiturient(textBox1.Text, textBox2.Text);
                     abiturient.ShowDialog();
+                    this.Hide();
                 }
                 if(status=="Администратор")
                 {
                     Administrator administrator = new Administrator();
                     administrator.ShowDialog();
+                    this.Hide();
                 }
             }
             catch(Exception ex)
