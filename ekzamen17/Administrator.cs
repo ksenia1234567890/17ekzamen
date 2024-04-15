@@ -109,6 +109,12 @@ namespace ekzamen17
         {
             this.Hide();
         }
+
+        // Редактирование списка направлений
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     }
 

@@ -335,6 +335,8 @@
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(185, 21);
             this.comboBox8.TabIndex = 2;
+            this.comboBox8.SelectedIndexChanged += new System.EventHandler(this.comboBox8_SelectedIndexChanged);
+            this.comboBox8.TextChanged += new System.EventHandler(this.comboBox8_TextChanged);
             // 
             // comboBox9
             // 
@@ -348,6 +350,7 @@
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(185, 21);
             this.comboBox9.TabIndex = 2;
+            this.comboBox9.SelectedIndexChanged += new System.EventHandler(this.comboBox9_SelectedIndexChanged);
             // 
             // comboBox10
             // 
