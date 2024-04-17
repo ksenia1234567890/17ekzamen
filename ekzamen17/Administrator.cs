@@ -110,7 +110,7 @@ namespace ekzamen17
             this.Hide();
         }
 
-        // Редактирование списка направлений
+        // Редактирование направлений в списке
         private void button4_Click(object sender, EventArgs e)
         {
             Napravlenie napravlenie = new Napravlenie();
